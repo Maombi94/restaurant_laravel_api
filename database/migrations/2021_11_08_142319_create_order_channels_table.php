@@ -15,8 +15,7 @@ class CreateOrderChannelsTable extends Migration
     {
         Schema::create('order_channels', function (Blueprint $table) {
             $table->id();
-            $table->string('channel_name');
-            $table->string('channel_description');
+            $table->integer('channel_id'); 
             $table->timestamp('open_time');
             $table->timestamp('close_time');
             $table->timestamps();

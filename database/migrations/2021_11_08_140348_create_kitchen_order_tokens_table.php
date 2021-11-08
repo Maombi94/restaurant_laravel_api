@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKOTSTable extends Migration
+class CreateKitchenOrderTokensTable extends Migration
 {
     /**
      * Run the migrations.
@@ -31,6 +31,6 @@ class CreateKOTSTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('k_o_t_s');
+        Schema::dropIfExists('kitchen_order_tokens');
     }
 }

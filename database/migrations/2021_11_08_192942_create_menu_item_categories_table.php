@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKotStatusTable extends Migration
+class CreateMenuItemCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateKotStatusTable extends Migration
      */
     public function up()
     {
-        Schema::create('k_o_t_status', function (Blueprint $table) {
+        Schema::create('menu_item_categories', function (Blueprint $table) {
             $table->id();
-            $table->integer('status');
+            $table->string('item_category_name');
+            $table->string('item_category_description');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateKotStatusTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('k_o_t_status');
+        Schema::dropIfExists('menu_item_categories');
     }
 }
